@@ -1,0 +1,20 @@
+q tricks learned this week:
+
+how to pass in a list as a function argument: 
+    eval f, mylist
+    f@/mylist
+
+debug a function: add :intermediate_result; to the line you want to set break point and see the output
+
+fastest way to join two unkeyed tables: flip (flip t1), flip t2
+
+functional select/exec, update/delete for dynamic query:
+    ?[t;();0b;cols!oldcols]; ?[t;();0b;cols];
+    ![t;();0b;cols!oldcols]; ![t;();0b;cols];
+    
+do not use pointer or reference inside a function. Function defined inside a function is not visible to within another function, e.g, f:{[x] g:{x+1}; h:{g[x]+2}}; will not work because inside h we can't access non-global function g.
+
+in kdb 2.8: wj: prevailing + []; wj1: [); aj: normal, aj0: use joined table timestamp.
+
+f, list will creat a parse tree like list, which may be subject of eval or value
+
