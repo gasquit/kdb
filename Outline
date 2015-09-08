@@ -1,0 +1,8 @@
+Results first
+Step 1, uncrossed aggregated order book. Raw->agg lv5->agg 2mkt->uncross
+Step 2, sample point ob (btec, espd, agg, unc), t1, t2 time order book. Sample comes in, 800k->3k
+Step 3, wmid for t1 and t2, smid for t1 and t2, vwap for t1; wmid on btec t1
+
+Step 4, target dsmid, signal wmid on aggunc, btec only, vwap50 on btec only, vwap100 on aggunc. Side: sample point avg tob qty, btec espd, unc. 
+
+Progress, now i have aggunc book at sample points, which I don't have before, can evaluate the effect of adding other market information
