@@ -18,3 +18,7 @@ in kdb 2.8: wj: prevailing + []; wj1: [); aj: normal, aj0: use joined table time
 
 f, list will creat a parse tree like list, which may be subject of eval or value
 
+9-14
+f . lists: this is the correct way to call a function with a list as the many arguments
+uj is perhaps the fastest way to join two tables in 0 axis. This operation might get slower as more columns are included. I deduce this is because what uj essentially does is data for columns needs to be copied to a consecutive location in memory for the merged table.
+
