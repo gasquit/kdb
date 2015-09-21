@@ -1,0 +1,18 @@
+save to kdb
+splayed table: `:/PATHTOFILE/file/ set sometable
+retrieve: get `:/PATHTOFILE/file/
+
+save partitioned table (must be splayed)
+manually make all symbol columns enumerated by `:/db/sym
+    update sym: `:/db/sym?sym from sometable
+
+\l will load database to current workspace
+
+about system access in kdb
+if someone change directory with \cd, others are also affected, just like variable creation in server memory. \l will rewrite last loaded database. Note you don't have to \cd to that directory to load a database
+
+
+thoughts on saving uncaggob table onto disk:
+i can save to lz_data/
+save to splayed will take approximately 4x time saving to just a file will take. But retrieving data is very fast <200ms, 1/6th of otherwise.
+
