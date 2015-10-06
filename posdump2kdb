@@ -1,0 +1,6 @@
+for each algo, on daily basis.
+script knows which date, provided the zip file, go to alt/ for nml file for related parameter, grep posdump file for fill order and strategy wants.
+nml file for which strategies are shemesh type.
+
+as a first step, record all shemesh strategies (evaluate hedgin performance):
+when getting filled, and started to hedge. Should record all fill to a table. Use a dummy col to flag if it's start fill.
