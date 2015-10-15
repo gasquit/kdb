@@ -1,0 +1,7 @@
+about process quote table:
+	load quote without where given a day is fast ~ 140, based on my guess this simply loads columns into memory
+	after where on venue, sym, the speed for loading is dependent on how many columns we select: the slimmest for quote is i, time, eventtime, eventseqno, bidprice, bidsize, askprice, asksize, quotelevel, which takes 1600
+	indexing: access on single column is fast, assign to single col is also fast. Somehow is much faster than bulk access.	a[rowidx;colnames] > a[rowidx;] colnames > (a each colnames)@\: rowidx. / note the last two are lists of cols where as the first is lists of rows
+	how: a[rowidx; colnames] flips the cols, so it's very slow; a[rowidx;] colnames first slice each cols to form a temp table, then access some cols; (a each colnames)@\: rowidx only slices those selected cols.
+	
+	
