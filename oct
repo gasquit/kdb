@@ -5,3 +5,9 @@ about process quote table:
 	how: a[rowidx; colnames] flips the cols, so it's very slow; a[rowidx;] colnames first slice each cols to form a temp table, then access some cols; (a each colnames)@\: rowidx only slices those selected cols.
 	
 	
+create random variable name:
+''.join(random.choice(string.letters) for i in range(10))
+''.join(random.choice(string.letters+string.digits) for i in range(10))
+hashlib.sha1(somestring).hexdigest()
+''.join(format(ord(c),'02x') for c in np.random.bytes(8))
+
